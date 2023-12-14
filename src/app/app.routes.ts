@@ -18,6 +18,8 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        loadComponent: () => import('./home/home.component').then(c => c.HomeComponent)
+        redirectTo: 'home',
+        pathMatch: 'full'
+        // loadComponent: () => import('./home/home.component').then(c => c.HomeComponent)
     }
 ];
